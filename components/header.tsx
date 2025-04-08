@@ -20,7 +20,7 @@ export default async function Header() {
               <Button variant="outline" asChild>
                 <Link href="/sign-in">Sign In</Link>
               </Button>
-              <Button variant="outline" asChild>
+              <Button asChild>
                 <Link href="/sign-up">Sign Up</Link>
               </Button>
             </>
