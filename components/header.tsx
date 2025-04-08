@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import ExternalAuthButton from "@/components/external-auth-button";
 import { createClient } from "@/utils/update/server";
 
 export default async function Header() {
@@ -19,9 +18,11 @@ export default async function Header() {
           {user == null && (
             <>
               <Button variant="outline" asChild>
-                <Link href="/sign-in">Custom Sign In</Link>
+                <Link href="/sign-in">Sign In</Link>
               </Button>
-              <ExternalAuthButton />
+              <Button variant="outline" asChild>
+                <Link href="/sign-up">Sign Up</Link>
+              </Button>
             </>
           )}
         </div>
