@@ -1,10 +1,5 @@
-<a href="https://nextjs-supabase-stripe-update.vercel.app">
-  <img alt="Update – Vercel Next.js Template" src="https://images.update.dev/nextjs-supabase-stripe-update-template-thumbnail.png">
-  <h1 align="center">Update + Next.js Template</h1>
-</a>
-
 <p align="center">
-  A full-featured SaaS starter with auth, billing, and entitlements—powered by <a href="https://update.dev">Update</a> and <a href="https://nextjs.org/">Next.js</a>.
+  A full-featured SaaS starter with auth, billing, and entitlements—powered by Update and <a href="https://nextjs.org/">Next.js</a>.
 </p>
 
 <p align="center">
@@ -27,26 +22,12 @@
 
 ---
 
-## 🔗 Demo
-
-Live demo: [nextjs-supabase-stripe-update.vercel.app](https://nextjs-supabase-stripe-update.vercel.app/)
-
----
-
-## 🚀 Deploy to Vercel
-
-Click the button below to instantly deploy the template and set up Update and Supabase:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fupdatedotdev%2Fnextjs-supabase-stripe-update&project-name=update-nextjs-template&repository-name=update-nextjs-template&demo-title=Update%20SaaS%20Starter&demo-description=A%20Next.js%20starter%20with%20Update%20for%20auth%2C%20billing%2C%20and%20orgs&demo-url=https%3A%2F%2Fvercel-update-template.vercel.app&external-id=https%3A%2F%2Fupdate.dev)
-
----
-
 ## 🛠️ Local Setup
 
 ### 1. Clone the project
 
 ```bash
-git clone https://github.com/updatedotdev/nextjs-supabase-stripe-update.git cd nextjs-supabase-stripe-update
+git clone https://github.com/Jacob-A11/Next-Supabase-Stripe.git
 ```
 
 ### 2. Install dependencies
@@ -119,7 +100,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 - 📚 [Full documentation](https://update.dev/docs)
 - 💬 [Join our Discord](https://discord.gg/Guege5tXFK)
-- 🐛 Found a bug? [Open an issue](https://github.com/updatedotdev/nextjs-supabase-stripe-update/issues)
+- 🐛 Found a bug? [Open an issue](https://github.com/Jacob-A11/Next-Supabase-Stripe.git)
 
 ---
 
