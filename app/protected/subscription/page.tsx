@@ -1,10 +1,10 @@
 import SubscriptionActions from "@/components/subcription-actions";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/utils/styles";
-import { createClient } from "@/utils/update/server";
+import { createUpdateClient } from "@/utils/update/server";
 
 export default async function Page() {
-  const client = await createClient();
+  const client = await createUpdateClient();
   const { data, error } = await client.billing.getSubscriptions();
 
   if (error) {

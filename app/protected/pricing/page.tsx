@@ -1,8 +1,8 @@
-import { createClient } from "@/utils/update/server";
+import { createUpdateClient } from "@/utils/update/server";
 import PricingContent from "@/components/pricing-content";
 
 export default async function PricingPage() {
-  const client = await createClient();
+  const client = await createUpdateClient();
   const { data, error } = await client.billing.getProducts();
   const { data: subscriptionData } = await client.billing.getSubscriptions();
 
@@ -12,7 +12,7 @@ export default async function PricingPage() {
 
   const currentProductId =
     subscriptionData.subscriptions == null ||
-      subscriptionData.subscriptions.length === 0
+    subscriptionData.subscriptions.length === 0
       ? null
       : subscriptionData.subscriptions[0].product.id;
 

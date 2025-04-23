@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ProductWithPrices } from "@updatedev/js";
-import { createClient } from "@/utils/update/client";
+import { createUpdateClient } from "@/utils/update/client";
 import { useState } from "react";
 
 interface PricingCardProps {
@@ -39,8 +39,8 @@ export default function PricingCard({
 
   async function handleSelectPlan(priceId: string) {
     setIsLoading(true);
-    const client = createClient();
-    const redirectUrl = `http://localhost:4000/protected/subscription`;
+    const client = createUpdateClient();
+    const redirectUrl = `http://localhost:3000/protected/subscription`;
     const { data, error } = await client.billing.createCheckoutSession(
       priceId,
       {

@@ -1,13 +1,13 @@
 "use server";
 
-import { createClient } from "@/utils/update/server";
+import { createSupabaseClient } from "@/utils/supabase/server";
 import { redirect } from "next/navigation";
 import { encodedRedirect } from "@/utils/redirect";
 
 export const signInAction = async (formData: FormData) => {
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
-  const client = await createClient();
+  const client = await createSupabaseClient();
 
   const { error } = await client.auth.signInWithPassword({
     email,
@@ -24,7 +24,7 @@ export const signInAction = async (formData: FormData) => {
 export const signUpAction = async (formData: FormData) => {
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
-  const client = await createClient();
+  const client = await createSupabaseClient();
 
   const { error } = await client.auth.signUp({
     email,
@@ -39,7 +39,7 @@ export const signUpAction = async (formData: FormData) => {
 };
 
 export const signOutAction = async () => {
-  const client = await createClient();
+  const client = await createSupabaseClient();
   await client.auth.signOut();
   return redirect("/sign-in");
 };
