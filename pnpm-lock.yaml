@@ -14,15 +14,18 @@ importers:
       '@radix-ui/react-slot':
         specifier: ^1.1.2
         version: 1.2.0(@types/react@19.1.0)(react@19.1.0)
+      '@supabase/ssr':
+        specifier: ^0.6.1
+        version: 0.6.1(@supabase/supabase-js@2.49.4)
+      '@supabase/supabase-js':
+        specifier: ^2.49.4
+        version: 2.49.4
       '@tailwindcss/postcss':
         specifier: ^4.0.13
         version: 4.1.3
       '@updatedev/js':
-        specifier: ^0.3.3
-        version: 0.3.4
-      '@updatedev/ssr':
-        specifier: ^0.3.3
-        version: 0.3.4
+        specifier: ^0.4.1
+        version: 0.4.1
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -409,8 +412,8 @@ packages:
   '@supabase/realtime-js@2.11.2':
     resolution: {integrity: sha512-u/XeuL2Y0QEhXSoIPZZwR6wMXgB+RQbJzG9VErA3VghVt7uRfSVsjeqd7m5GhX3JR6dM/WRmLbVR8URpDWG4+w==}
 
-  '@supabase/ssr@0.5.2':
-    resolution: {integrity: sha512-n3plRhr2Bs8Xun1o4S3k1CDv17iH5QY9YcoEvXX3bxV1/5XSasA0mNXYycFmADIdtdE6BG9MRjP5CGIs8qxC8A==}
+  '@supabase/ssr@0.6.1':
+    resolution: {integrity: sha512-QtQgEMvaDzr77Mk3vZ3jWg2/y+D8tExYF7vcJT+wQ8ysuvOeGGjYbZlvj5bHYsj/SpC0bihcisnwPrM4Gp5G4g==}
     peerDependencies:
       '@supabase/supabase-js': ^2.43.4
 
@@ -504,9 +507,6 @@ packages:
 
   '@tybys/wasm-util@0.9.0':
     resolution: {integrity: sha512-6+7nlbMVX/PVDCwaIQ8nTOPveOcFLSt8GcXdx8hD0bt39uWxYT88uXzqTd4fTvqta7oeUJqudepapKNt2DYJFw==}
-
-  '@types/cookie@0.6.0':
-    resolution: {integrity: sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==}
 
   '@types/estree@1.0.7':
     resolution: {integrity: sha512-w28IoSUCJpidD/TGviZwwMJckNESJZXFu7NBZ5YJ4mEUnNraUn9Pm8HSZm/jDF1pDWYKspWE7oVphigUPRakIQ==}
@@ -656,12 +656,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@updatedev/js@0.3.4':
-    resolution: {integrity: sha512-Ops7M2r4gdMim8w+kQUoe77YoLcovAqrAdWnR4JIGjDsyMr+Fa+7ZrDxKAOZAPu3XZ0yYs7mDOtX7KCQ+zmGMA==}
-    engines: {node: '>=12.0'}
-
-  '@updatedev/ssr@0.3.4':
-    resolution: {integrity: sha512-Hj4GylAKwTQ65CHE2cF5tkSsMSHSfXcLc+gpXY6mDcDHTnLmIFN3O5XGDAZX2ngTtfcNwbVio/Ts9YIbAkkdOw==}
+  '@updatedev/js@0.4.1':
+    resolution: {integrity: sha512-39dgliK+JSh3YRvXLrCU+m8fQyvBy+yFQ27S13+hsS1bxJXIsV9FbRsAeVNzFb900atw+kQknF64bGIgCtpIRQ==}
     engines: {node: '>=12.0'}
 
   acorn-jsx@5.3.2:
@@ -805,10 +801,6 @@ packages:
 
   concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
-
-  cookie@0.7.2:
-    resolution: {integrity: sha512-yki5XnKuf750l50uGTllt6kKILY4nQ1eNIQatoXEByZ5dWgnKqbnqmTrBE5B4N7lrMJKQ2ytWMiTO2o0v6Ew/w==}
-    engines: {node: '>= 0.6'}
 
   cookie@1.0.2:
     resolution: {integrity: sha512-9Kr/j4O16ISv8zBBhJoi4bXOYNTkFLOqSL3UDB0njXxCXNezjeyVrJyGOWtgfs/q2km1gwBcfH8q1yEGoMYunA==}
@@ -2142,11 +2134,10 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@supabase/ssr@0.5.2(@supabase/supabase-js@2.49.4)':
+  '@supabase/ssr@0.6.1(@supabase/supabase-js@2.49.4)':
     dependencies:
       '@supabase/supabase-js': 2.49.4
-      '@types/cookie': 0.6.0
-      cookie: 0.7.2
+      cookie: 1.0.2
 
   '@supabase/storage-js@2.7.1':
     dependencies:
@@ -2236,8 +2227,6 @@ snapshots:
     dependencies:
       tslib: 2.8.1
     optional: true
-
-  '@types/cookie@0.6.0': {}
 
   '@types/estree@1.0.7': {}
 
@@ -2387,24 +2376,9 @@ snapshots:
   '@unrs/resolver-binding-win32-x64-msvc@1.4.1':
     optional: true
 
-  '@updatedev/js@0.3.4':
+  '@updatedev/js@0.4.1':
     dependencies:
-      '@supabase/auth-js': 2.69.1
-      '@supabase/supabase-js': 2.49.4
       cookie: 1.0.2
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
-
-  '@updatedev/ssr@0.3.4':
-    dependencies:
-      '@supabase/ssr': 0.5.2(@supabase/supabase-js@2.49.4)
-      '@supabase/supabase-js': 2.49.4
-      '@updatedev/js': 0.3.4
-      cookie: 1.0.2
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
 
   acorn-jsx@5.3.2(acorn@8.14.1):
     dependencies:
@@ -2576,8 +2550,6 @@ snapshots:
     optional: true
 
   concat-map@0.0.1: {}
-
-  cookie@0.7.2: {}
 
   cookie@1.0.2: {}
 

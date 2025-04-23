@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { createClient } from "@/utils/update/server";
+import { createSupabaseClient } from "@/utils/supabase/server";
 
 export default async function Header() {
-  const client = await createClient();
+  const client = await createSupabaseClient();
   const {
     data: { user },
   } = await client.auth.getUser();

@@ -1,10 +1,10 @@
-import { createClient } from "@/utils/update/server";
+import { createUpdateClient } from "@/utils/update/server";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import PaidContentCard from "@/components/paid-content-card";
 
 export default async function PaidContent() {
-  const client = await createClient();
+  const client = await createUpdateClient();
   const { data, error } = await client.entitlements.check("premium");
 
   if (error) {

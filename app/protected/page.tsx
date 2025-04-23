@@ -1,8 +1,8 @@
-import { createClient } from "@/utils/update/server";
+import { createSupabaseClient } from "@/utils/supabase/server";
 import AuthPageSignOutButton from "@/components/auth-sign-out-button";
 
 export default async function ProtectedPage() {
-  const client = await createClient();
+  const client = await createSupabaseClient();
   const {
     data: { user },
   } = await client.auth.getUser();
@@ -62,7 +62,7 @@ export default async function ProtectedPage() {
               <div className="text-muted-foreground">Providers</div>
               <div>
                 {user.identities
-                  ?.map((identity) => identity.provider)
+                  ?.map(identity => identity.provider)
                   .join(", ") || "Email"}
               </div>
             </div>
