@@ -1,5 +1,5 @@
 <p align="center">
-  A full-featured SaaS starter with auth, billing, and entitlements—powered by Update and <a href="https://nextjs.org/">Next.js</a>.
+  A full-featured SaaS starter with auth, billing, and entitlements—powered by <a href="https://update.dev/">Update</a> and <a href="https://nextjs.org/">Next.js</a>.
 </p>
 
 <p align="center">
