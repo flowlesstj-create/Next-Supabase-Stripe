@@ -2,11 +2,16 @@ import { createSupabaseClient } from "@/utils/supabase/client";
 import { createClient } from "@updatedev/js";
 
 export function createUpdateClient() {
-  const client = createClient(process.env.NEXT_PUBLIC_UPDATE_PUBLISHABLE_KEY!, {
+  if (!process.env.NEXT_PUBLIC_UPDATE_PUBLISHABLE_KEY) {
+    throw new Error("NEXT_PUBLIC_UPDATE_PUBLISHABLE_KEY is required");
+  }
+  const client = createClient(process.env.NEXT_PUBLIC_UPDATE_PUBLISHABLE_KEY, {
     getSessionToken: async () => {
       const supabase = createSupabaseClient();
       const { data } = await supabase.auth.getSession();
-      if (data.session == null) return;
+      if (data.session == null) {
+        throw new Error("No active session found. User must be authenticated.");
+      }
       return data.session.access_token;
     },
     // NOTE: For Vercel templates, we need to hardcode the environment as "test" even
