@@ -27,7 +27,7 @@ export default async function Page() {
       </div>
       <div className="space-y-6">
         {data.subscriptions.map((subscription, index) => (
-          <Card key={index}>
+          <Card key={subscription.id}>
             <h2 className="font-medium">{subscription.product.name}</h2>
             <div className="grid gap-2 mt-2 text-sm">
               <div className="grid grid-cols-[150px_1fr]">
@@ -67,12 +67,6 @@ export default async function Page() {
             </div>
           </Card>
         ))}
-      </div>
-      <div>
-        <h3 className="text-lg font-medium">Raw Data</h3>
-        <div className="mt-2 border p-4 rounded-lg">
-          <pre>{JSON.stringify(data.subscriptions, null, 2)}</pre>
-        </div>
       </div>
     </div>
   );
